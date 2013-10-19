@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.btnDBConnection = new System.Windows.Forms.Button();
+            this.btnConnectionPooling = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnDBConnection
@@ -41,11 +42,22 @@
             this.btnDBConnection.UseVisualStyleBackColor = true;
             this.btnDBConnection.Click += new System.EventHandler(this.btnDBConnection_Click);
             // 
+            // btnConnectionPooling
+            // 
+            this.btnConnectionPooling.Location = new System.Drawing.Point(57, 109);
+            this.btnConnectionPooling.Name = "btnConnectionPooling";
+            this.btnConnectionPooling.Size = new System.Drawing.Size(135, 25);
+            this.btnConnectionPooling.TabIndex = 1;
+            this.btnConnectionPooling.Text = "Connection Pooling";
+            this.btnConnectionPooling.UseVisualStyleBackColor = true;
+            this.btnConnectionPooling.Click += new System.EventHandler(this.btnConnectionPooling_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 261);
+            this.Controls.Add(this.btnConnectionPooling);
             this.Controls.Add(this.btnDBConnection);
             this.Name = "Form1";
             this.Text = "Form1";
@@ -57,6 +69,7 @@
         #endregion
 
         private System.Windows.Forms.Button btnDBConnection;
+        private System.Windows.Forms.Button btnConnectionPooling;
     }
 }
 

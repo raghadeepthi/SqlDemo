@@ -43,5 +43,18 @@ namespace WebSqlDemo
 
             }
         }
+
+        private void btnConnectionPooling_Click(object sender, EventArgs e)
+        {
+            //Demonstrate Connection pooling
+            SqlConnection[] cons = new SqlConnection[100];
+            for (int i= 0; i < cons.Length ; i++)
+            {
+                cons[i] = new SqlConnection(Helper.ConnectionString); //Creating 100 SqlConnection connection
+                cons[i].Open();
+              // cons[i].Close(); // if the connection is not closed then application hangs even if makes more than 100 connections to DB
+                
+            }
+        }
     }
 }
